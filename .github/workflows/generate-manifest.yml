@@ -1,4 +1,4 @@
-name: Generate Novel Manifest
+name: Deploy Novel Site to Pages
 
 on:
   push:
@@ -8,30 +8,47 @@ on:
     paths:
       - 'content/**'
       - 'generate.js'
+      - 'script.js'
+      - 'style.css'
+      - 'index.html'
+
+# صلاحيات النشر لصفحات غيت هاب
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# تجنب التكرار والتعارض أثناء النشر
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Run Manifest Generator
-      run: node generate.js
+      - name: Generate Manifest
+        run: node generate.js
 
-    - name: Commit and Push Changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add manifest.json
-        git diff-index --quiet HEAD || git commit -m "chore: auto-regenerate manifest.json"
-        git push
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
