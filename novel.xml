@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<novel>
+    <metadata>
+        <title>غوامر</title>
+        <author>المؤلف</author>
+        <description>قصة ملحمية في عالم مظلم...</description>
+    </metadata>
+    <toc>
+        <item type="chapter" id="prologue">
+            <title>المقدمة</title>
+            <content>
+                الظلام يكتنف كل شيء. في هذا العالم الذي تلاشت فيه معالم النور، يقف بطلنا وحيداً...
+                
+                هذه الرواية تأخذك في رحلة لا تُنسى عبر عوالم غوامر المليئة بالغموض والإثارة.
+            </content>
+        </item>
+        <item type="chapter" id="dedication">
+            <title>إهداء</title>
+            <content>
+                إلى كل من يبحث عن بصيص أمل في أحلك الأوقات...
+            </content>
+        </item>
+        <item type="arc" id="arc1">
+            <title>الآرك القاق: صحوة الظلال</title>
+            <item type="chapter" id="arc1_part1">
+                <title>الجزء الأول: بداية النهاية</title>
+                <content>
+                    كانت ليلة باردة، الرياح تعوي بين أزقة المدينة القديمة، والسماء ملبدة بغيوم حمراء تنذر بالخطر.
+                    
+                    تحرك الظل ببطء متجاوزاً الحراس، كانت خطواته لا تُسمع، كأنه جزء من الليل نفسه.
+                </content>
+            </item>
+            <item type="chapter" id="arc1_part2">
+                <title>الجزء الثاني: المواجهة الأولى</title>
+                <content>
+                    التقى السيف بالسيف، وتطايرت شرارات نارية أضاءت المكان للحظة وجيزة. 
+                    كان خصمه عنيداً، لكن إرادته كانت أقوى.
+                </content>
+            </item>
+            <item type="chapter" id="arc1_part10">
+                <title>الجزء العاشر: كشف المستور</title>
+                <content>
+                    أخيراً، سقط القناع. الوجه الذي كان يخفيه كل هذا الوقت لم يكن سوى...
+                    نهاية الآرك الأول.
+                </content>
+            </item>
+        </item>
+        <item type="arc" id="arc2">
+            <title>الآرك الثاني: نيران الانتقام</title>
+            <item type="chapter" id="arc2_part1">
+                <title>الفصل الأول: رماد الماضي</title>
+                <content>
+                    لم يتبق سوى الرماد، لكن من تحت الرماد تُولد العنقاء.
+                    هكذا بدأ الفصل الجديد من رحلته، حيث الانتقام هو المحرك الوحيد.
+                </content>
+            </item>
+        </item>
+    </toc>
+</novel>

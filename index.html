@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>غوامر - رواية ويب</title>
+    <meta name="description" content="قراءة رواية غوامر حصرياً">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0.1">
+</head>
+<body class="theme-dark">
+    <div class="mesh-bg"></div>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="glass-header">
+            <div class="logo">
+                <h1>غوامر</h1>
+            </div>
+            <div class="header-actions">
+                <button id="download-btn" class="btn btn-primary" title="تحميل بصيغة EPUB">
+                    <i class="fas fa-download"></i> <span class="hide-mobile">تحميل الرواية</span>
+                </button>
+                <button id="theme-toggle" class="btn btn-icon" title="تغيير المظهر">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Sidebar / TOC (Right side) -->
+            <aside class="sidebar glass-panel" id="sidebar">
+                <div class="sidebar-header">
+                    <h2>الفهرس</h2>
+                    <button id="close-sidebar" class="btn-icon mobile-close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <nav id="toc-container" class="toc-nav">
+                    <div class="loader-small"></div>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content-area glass-panel">
+                <div class="content-header">
+                    <button id="open-sidebar" class="btn-icon mobile-menu-btn"><i class="fas fa-bars"></i> الفهرس</button>
+                    <div class="breadcrumbs" id="breadcrumbs"></div>
+                </div>
+                
+                <div id="chapter-view" class="chapter-container">
+                    <h1 id="chapter-title" class="chapter-title">جاري التحميل...</h1>
+                    <div id="chapter-content" class="chapter-text">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="chapter-navigation">
+                    <button id="prev-btn" class="btn btn-nav" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <button id="next-btn" class="btn btn-nav" disabled>
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js?v=1.0.2"></script>
+</body>
+</html>
